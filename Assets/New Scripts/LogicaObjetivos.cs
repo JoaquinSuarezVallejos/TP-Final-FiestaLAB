@@ -10,11 +10,16 @@ public class LogicaObjetivos : MonoBehaviour
     [SerializeField] TextMeshProUGUI textoMision;
     [SerializeField] GameObject inticon, EText;
     [SerializeField] int cantidadObjetivos;
-    void Start()
+
+    void Update()
     {
-        cantidadObjetivos = numDeObjetivos.Length;
-        cantidadObjetivos = GameObject.FindGameObjectsWithTag("Objetivo").Length;
-        textoMision.text = "Consigue  todos  los  objetos  para  armar  una  fiesta " + "\n Restantes: " + cantidadObjetivos;
+        if (LogicaNPC.check2 == true)
+        {
+            cantidadObjetivos = numDeObjetivos.Length;
+            cantidadObjetivos = GameObject.FindGameObjectsWithTag("Objetivo").Length;
+            textoMision.text = "Consigue  todos  los  objetos  para  armar  una  fiesta " + "\n Restantes: " + cantidadObjetivos;
+            LogicaNPC.check2 = false;
+        }
     }
 
     void OnTriggerStay(Collider col)

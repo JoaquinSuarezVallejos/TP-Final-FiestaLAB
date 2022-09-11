@@ -8,24 +8,31 @@ using TMPro;
 
 public class LogicaNPC : MonoBehaviour
 {
-    public GameObject panelNPCHablar, panelNPCMision, btnSiguiente, inticon, EText, Player;
-    public TextMeshProUGUI textoMision;
+    public GameObject panelNPCHablar, panelNPCMision, inticon, Player, MissionObjects, PanelGeneral;
+    public TextMeshProUGUI textoObjetivoNPC;
     public GameObject[] objetivos;
     public int numDeObjetivos;
+    public AudioSource HmmNPC;
+    public bool check = false;
+    public static bool check2 = false;
 
     void Start()
     {
         numDeObjetivos = objetivos.Length;
-        textoMision.text = "Consigue  todos  los  objetos  para  armar  una  fiesta " + "\n Restantes: " + numDeObjetivos;
         panelNPCHablar.SetActive(false);
+        check = false;
+        check2 = false;
     }
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.tag == "NPC")
+        if (check == false)
         {
-            inticon.SetActive(true);
-            EText.SetActive(true);
+            if (col.gameObject.tag == "NPC")
+            {
+                inticon.SetActive(true);
+                panelNPCHablar.SetActive(true);
+            }
         }
     }
 
@@ -33,11 +40,18 @@ public class LogicaNPC : MonoBehaviour
     {
         if (col.gameObject.tag == "NPC") 
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (check == false)
             {
-                Player.GetComponent<FirstPersonController>().enabled = false;
-                inticon.SetActive(false);
-                EText.SetActive(false);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    HmmNPC.Play();
+                    Player.GetComponent<FirstPersonController>().enabled = false;
+                    inticon.SetActive(false);
+                    panelNPCHablar.SetActive(false);
+                    panelNPCMision.SetActive(true);
+                    StartCoroutine(HablarConNPC());
+                    check = true;
+                }
             }
         }
     }
@@ -47,7 +61,24 @@ public class LogicaNPC : MonoBehaviour
         if (col.gameObject.tag == "NPC")
         {
             inticon.SetActive(false);
-            EText.SetActive(false);
+            panelNPCHablar.SetActive(false);
         }
+    }
+
+    IEnumerator HablarConNPC()
+    {
+        textoObjetivoNPC.text = "Michelle:  Que  laboratorios  tan  aburridos!";
+        yield return new WaitForSeconds(2.5f);
+        textoObjetivoNPC.text = "Michelle:  Si  tan  solo  se  hiciera  una  fiesta...";
+        yield return new WaitForSeconds(2.5f);
+        textoObjetivoNPC.text = "Michelle:  Crees  que  se  pueda?";
+        yield return new WaitForSeconds(2.5f);
+        textoObjetivoNPC.text = "Michelle:  Genial, manos a  la  obra!";
+        yield return new WaitForSeconds(2.5f);
+        panelNPCMision.SetActive(false);
+        Player.GetComponent<FirstPersonController>().enabled = true;
+        MissionObjects.SetActive(true);
+        PanelGeneral.SetActive(true);
+        check2 = true;
     }
 }
