@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 54465085404151414}
   - component: {fileID: 65135993563976242}
   m_Layer: 0
-  m_Name: Net.001
+  m_Name: Net1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300160, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
 --- !u!54 &54465085404151414
