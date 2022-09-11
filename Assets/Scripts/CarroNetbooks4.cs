@@ -19,7 +19,7 @@ public class CarroNetbooks4 : MonoBehaviour
             inticon.SetActive(true);
             Ntext.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 check = true;
             }
