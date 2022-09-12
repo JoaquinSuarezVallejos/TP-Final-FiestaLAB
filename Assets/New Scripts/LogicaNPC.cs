@@ -16,6 +16,7 @@ public class LogicaNPC : MonoBehaviour
     public static bool check = false;
     public static bool check2 = false;
     public static bool check3 = false;
+    public static bool check4 = false;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class LogicaNPC : MonoBehaviour
         check = false;
         check2 = false;
         check3 = false;
+        check4 = false;
     }
 
     void OnTriggerEnter (Collider col)
@@ -118,5 +120,6 @@ public class LogicaNPC : MonoBehaviour
         textoObjetivoNPC.text = "Party  Time!!!";
         yield return new WaitForSeconds(2.5f);
         Player.GetComponent<FirstPersonController>().enabled = true;
+        check4 = true;
     }
 }

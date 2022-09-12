@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/DefaultScene.unity
-    guid: 3329a9759f39477488b14835953caa79
   - enabled: 1
     path: Assets/Scenes/FiestaLAB.unity
     guid: be919b8765e04cb47bf216fee64b937c
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: a51341ee06c794142a0b99a4a0587592
+  - enabled: 1
+    path: Assets/Scenes/Lose Scene.unity
+    guid: bb69e300e5fdac54da86d4f86ab46423
   m_configObjects: {}

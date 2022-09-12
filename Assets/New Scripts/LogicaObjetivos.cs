@@ -8,7 +8,7 @@ public class LogicaObjetivos : MonoBehaviour
 {
     [SerializeField] int[] numDeObjetivos = new int[13];
     [SerializeField] TextMeshProUGUI textoMision;
-    [SerializeField] GameObject inticon, EText;
+    [SerializeField] GameObject inticon, EText, panelTimer;
     [SerializeField] int cantidadObjetivos;
     public static bool check3 = false;
     public AudioSource PickupSoud;
@@ -51,6 +51,9 @@ public class LogicaObjetivos : MonoBehaviour
             {
                 textoMision.text = "Regresa  con  Michelle";
                 check3 = true;
+                LogicaNPC.check3 = false;
+                CountDownTimer.currentTime = 35f;
+                panelTimer.SetActive(false);
             }
         }
    }

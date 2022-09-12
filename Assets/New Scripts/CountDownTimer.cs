@@ -6,12 +6,15 @@ using TMPro;
 
 public class CountDownTimer : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 45f;
+    public static float currentTime = 0f;
+    float startingTime = 35f;
     [SerializeField] TextMeshProUGUI countdownText;
+
+    public static bool timesUp = false;
 
     void Start()
     {
+        timesUp = false;
         currentTime = startingTime;
     }
 
@@ -30,6 +33,11 @@ public class CountDownTimer : MonoBehaviour
             if (currentTime <= 10)
             {
                 countdownText.color = Color.red;
+            }
+
+            if (currentTime == 0)
+            {
+                timesUp = true;
             }
         }
     }
