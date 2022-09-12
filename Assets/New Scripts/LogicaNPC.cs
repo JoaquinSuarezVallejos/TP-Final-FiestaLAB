@@ -8,13 +8,14 @@ using TMPro;
 
 public class LogicaNPC : MonoBehaviour
 {
-    public GameObject panelNPCHablar, panelNPCMision, inticon, Player, MissionObjects, PanelGeneral;
+    public GameObject panelNPCHablar, panelNPCMision, inticon, Player, MissionObjects, PanelGeneral, panelTimer;
     public TextMeshProUGUI textoObjetivoNPC;
     public GameObject[] objetivos;
     public int numDeObjetivos;
     public AudioSource HmmNPC, DiscoMusic, RelaxingMusic;
     public static bool check = false;
     public static bool check2 = false;
+    public static bool check3 = false;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class LogicaNPC : MonoBehaviour
         panelNPCHablar.SetActive(false);
         check = false;
         check2 = false;
+        check3 = false;
     }
 
     void OnTriggerEnter (Collider col)
@@ -107,6 +109,8 @@ public class LogicaNPC : MonoBehaviour
         check2 = true;
         RelaxingMusic.Stop();
         DiscoMusic.Play();
+        check3 = true;
+        panelTimer.SetActive(true);
     }
 
     IEnumerator HablarConNPC2()
