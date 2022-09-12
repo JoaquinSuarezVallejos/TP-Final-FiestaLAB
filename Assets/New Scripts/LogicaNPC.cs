@@ -12,8 +12,8 @@ public class LogicaNPC : MonoBehaviour
     public TextMeshProUGUI textoObjetivoNPC;
     public GameObject[] objetivos;
     public int numDeObjetivos;
-    public AudioSource HmmNPC;
-    public bool check = false;
+    public AudioSource HmmNPC, DiscoMusic, RelaxingMusic;
+    public static bool check = false;
     public static bool check2 = false;
 
     void Start()
@@ -34,6 +34,17 @@ public class LogicaNPC : MonoBehaviour
                 panelNPCHablar.SetActive(true);
             }
         }
+
+        if (LogicaObjetivos.check3 == true)
+        {
+            if (col.gameObject.tag == "NPC")
+            {
+                inticon.SetActive(true);
+                panelNPCHablar.SetActive(true);
+                panelNPCMision.SetActive(false);
+                PanelGeneral.SetActive(false);
+            }
+        }
     }
 
     void OnTriggerStay (Collider col)
@@ -49,8 +60,22 @@ public class LogicaNPC : MonoBehaviour
                     inticon.SetActive(false);
                     panelNPCHablar.SetActive(false);
                     panelNPCMision.SetActive(true);
-                    StartCoroutine(HablarConNPC());
+                    StartCoroutine(HablarConNPC1());
                     check = true;
+                }
+            }
+
+            if (LogicaObjetivos.check3 == true)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    HmmNPC.Play();
+                    Player.GetComponent<FirstPersonController>().enabled = false;
+                    inticon.SetActive(false);
+                    panelNPCHablar.SetActive(false);
+                    PanelGeneral.SetActive(false);
+                    panelNPCMision.SetActive(true);
+                    StartCoroutine(HablarConNPC2());
                 }
             }
         }
@@ -65,7 +90,7 @@ public class LogicaNPC : MonoBehaviour
         }
     }
 
-    IEnumerator HablarConNPC()
+    IEnumerator HablarConNPC1()
     {
         textoObjetivoNPC.text = "Michelle:  Que  laboratorios  tan  aburridos!";
         yield return new WaitForSeconds(2.5f);
@@ -80,5 +105,14 @@ public class LogicaNPC : MonoBehaviour
         MissionObjects.SetActive(true);
         PanelGeneral.SetActive(true);
         check2 = true;
+        RelaxingMusic.Stop();
+        DiscoMusic.Play();
+    }
+
+    IEnumerator HablarConNPC2()
+    {
+        textoObjetivoNPC.text = "Party  Time!!!";
+        yield return new WaitForSeconds(2.5f);
+        Player.GetComponent<FirstPersonController>().enabled = true;
     }
 }

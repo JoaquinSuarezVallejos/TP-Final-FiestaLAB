@@ -10,6 +10,13 @@ public class LogicaObjetivos : MonoBehaviour
     [SerializeField] TextMeshProUGUI textoMision;
     [SerializeField] GameObject inticon, EText;
     [SerializeField] int cantidadObjetivos;
+    public static bool check3 = false;
+    public AudioSource PickupSoud;
+
+    void Start()
+    {
+        check3 = false;
+    }
 
     void Update()
     {
@@ -35,13 +42,15 @@ public class LogicaObjetivos : MonoBehaviour
                 cantidadObjetivos--;
                 textoMision.text = "Consigue  todos  los  objetos  para  armar  una  fiesta " + "\n Restantes: " + cantidadObjetivos;
 
+                PickupSoud.Play();
                 inticon.SetActive(false);
                 EText.SetActive(false);
             }
 
             if (cantidadObjetivos <= 0)
             {
-                textoMision.text = "Regresa con el NPC";
+                textoMision.text = "Regresa  con  Michelle";
+                check3 = true;
             }
         }
    }
