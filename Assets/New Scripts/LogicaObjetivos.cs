@@ -52,7 +52,7 @@ public class LogicaObjetivos : MonoBehaviour
                 textoMision.text = "Regresa  con  Michelle";
                 check3 = true;
                 LogicaNPC.check3 = false;
-                CountDownTimer.currentTime = 35f;
+                CountDownTimer.currentTime = 40f;
                 panelTimer.SetActive(false);
             }
         }
