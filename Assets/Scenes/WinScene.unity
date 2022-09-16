@@ -70,7 +70,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 2
+    m_MixedBakeMode: 1
     m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 45242995}
   m_Layer: 0
   m_Name: PizzaBox (1)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 88287130}
   m_Layer: 0
   m_Name: PizzaBox (2)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 310238228}
   m_Layer: 0
   m_Name: PizzaBox (3)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2556,7 +2556,7 @@ GameObject:
   - component: {fileID: 448622705}
   m_Layer: 0
   m_Name: BalloonPack
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2901,8 +2901,8 @@ MonoBehaviour:
   m_WalkSpeed: 2
   m_RunSpeed: 3
   m_RunstepLenghten: 0.2
-  m_JumpSpeed: 7
-  m_StickToGroundForce: 10
+  m_JumpSpeed: 4.5
+  m_StickToGroundForce: 8
   m_GravityMultiplier: 2
   m_MouseLook:
     XSensitivity: 2
@@ -4398,7 +4398,7 @@ GameObject:
   - component: {fileID: 906798379}
   m_Layer: 0
   m_Name: PizzaSet (1)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4756,7 +4756,7 @@ GameObject:
   - component: {fileID: 929602154}
   m_Layer: 0
   m_Name: Speaker2
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5040,7 +5040,7 @@ GameObject:
   - component: {fileID: 972078214}
   m_Layer: 0
   m_Name: Speaker2 (1)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5202,7 +5202,7 @@ GameObject:
   - component: {fileID: 1008589705}
   m_Layer: 0
   m_Name: EnergyDrinks4
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5368,7 +5368,7 @@ GameObject:
   - component: {fileID: 1016033193}
   m_Layer: 0
   m_Name: PartyCone (1)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5787,7 +5787,7 @@ GameObject:
   - component: {fileID: 1032641536}
   m_Layer: 0
   m_Name: PizzaSet
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17381,7 +17381,7 @@ GameObject:
   - component: {fileID: 1160411248}
   m_Layer: 0
   m_Name: PartyCone (4)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17648,7 +17648,7 @@ GameObject:
   - component: {fileID: 1241825161}
   m_Layer: 0
   m_Name: PartyCone (3)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17854,7 +17854,7 @@ GameObject:
   - component: {fileID: 1242435995}
   m_Layer: 0
   m_Name: Speaker1
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17950,10 +17950,10 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.75
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -18083,7 +18083,7 @@ GameObject:
   - component: {fileID: 1284784733}
   m_Layer: 0
   m_Name: DJ Mixer (1)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19859,7 +19859,7 @@ GameObject:
   - component: {fileID: 1826057846}
   m_Layer: 0
   m_Name: EnergyDrinks2 (1)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20106,7 +20106,7 @@ GameObject:
   - component: {fileID: 1857218928}
   m_Layer: 0
   m_Name: DiscoBall
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20354,7 +20354,7 @@ GameObject:
   - component: {fileID: 1885535148}
   m_Layer: 0
   m_Name: PartyCone (2)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20617,7 +20617,7 @@ GameObject:
   - component: {fileID: 1887486409}
   m_Layer: 0
   m_Name: EnergyDrinks3
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20781,7 +20781,7 @@ GameObject:
   - component: {fileID: 1887963838}
   m_Layer: 0
   m_Name: EnergyDrinks2
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21142,7 +21142,7 @@ GameObject:
   - component: {fileID: 1910104867}
   m_Layer: 0
   m_Name: DiscoBall (1)
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21550,7 +21550,7 @@ GameObject:
   - component: {fileID: 1922314377}
   m_Layer: 0
   m_Name: EnergyDrinks1
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23350,7 +23350,7 @@ GameObject:
   - component: {fileID: 1982032764}
   m_Layer: 0
   m_Name: PartyGlasses
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28828,7 +28828,7 @@ GameObject:
   - component: {fileID: 3330615909737777260}
   m_Layer: 0
   m_Name: PartyCone
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29200,7 +29200,7 @@ GameObject:
   - component: {fileID: 3805990503087983603}
   m_Layer: 0
   m_Name: DJ Mixer
-  m_TagString: Objetivo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
